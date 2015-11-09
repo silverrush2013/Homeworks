@@ -1,16 +1,19 @@
 program algKMP;
-const n=7;
-m=3;
+
+const
+  n = 7;
+  m = 3;
+  max = 100;
+
+type
+  massiv1 = array[1..n] of integer;
+  massiv2 = array[1..m] of integer;
+
+procedure KMP(a: massiv1; b: massiv2);
 var
-  massivsovp:array[1..100] of integer;
-  a:array[1..n] of integer;
-  b:array[1..m] of integer;
-  itog,i,j: integer;
+  itog, i, j: integer;
+  massivsovp: array[1..Max] of integer;
 begin
-for i:=1 to n do
-read(a[i]);
-for i:=1 to m do
-read(b[i]);
   massivsovp[1] := 0;
   for i := 2 to m do 
   begin
@@ -30,4 +33,17 @@ read(b[i]);
   if (j = m) then itog := i - j + 1 
   else itog := 0;
   writeln(itog);
+end;
+
+var
+  a: massiv1;
+  b: massiv2;
+  i: integer;
+
+begin
+  for i := 1 to n do
+    read(a[i]);
+  for i := 1 to m do
+    read(b[i]);
+  KMP(a, b)
 end.

@@ -3,10 +3,10 @@ program resheto;
 const
   n = 67;
 
+procedure simplenumbers;
 var
   i, k, j: integer;
   a: array[1..n] of boolean;
-
 begin
   a[1] := false;
   for i := 2 to n do 
@@ -20,4 +20,8 @@ begin
   end;
   for i := 1 to n do
     if a[i] then write(i, ' '); {выводим все оставшиеся простые числа}
+end;
+
+begin
+  simplenumbers;
 end.
