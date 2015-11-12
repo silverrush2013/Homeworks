@@ -34,16 +34,16 @@ begin
     stolbecmax := 1;
     min2 := a[i, 1];
     stolbecmin := 1;
-    for j := 1 to m do {Находим максимальный и минимальный элемент} 
+    for j := 1 to m do {Находим максимальный и минимальный элемент в строке} 
     begin
       if a[i, j] >= max1 then
       begin
-        max1 := a[i, j];    
+        max1 := a[i, j];    {Максимальный элемент в строке}
         stolbecmax := j;        {Запоминаем столбец максимального элемента}
       end;
       if a[i, j] <= min2 then
       begin
-        min2 := a[i, j];    
+        min2 := a[i, j];    {Минимальный элемент в строке}
         stolbecmin := j;       {Запоминаем столбец минимального элемента} 
       end;
     end;
@@ -55,20 +55,20 @@ begin
     begin
       if a[k, stolbecmax] <= min1 then
       begin
-        min1 := a[k, stolbecmax];  
+        min1 := a[k, stolbecmax];  {Минимальный элемент в столбце}
         strokamin := k;
       end;
       if a[k, stolbecmin] >= max2 then
       begin
-        max2 := a[k, stolbecmin];  
+        max2 := a[k, stolbecmin];  {Максимальный элемент в столбце}
         strokamax := k;
       end;
     end;
-    if min1 = max1 then    {Если максимальный элемент в строке и минимальный в столбце сходятся,то выводим седловые точки}
+    if min1 = max1 then    {Если максимальный элемент в строке и минимальный в столбце сходятся,то выводим седловую точку}
     begin
       writeln(a[strokamax, stolbecmin], ' ');
     end;    
-    if min2 = max2 then    {Если минимальный элемент в строке и максимальный в столбце сходятся,то выводим его}
+    if min2 = max2 then    {Если минимальный элемент в строке и максимальный в столбце сходятся,то выводим седловую точку}
     begin
       writeln(a[strokamin, stolbecmax], ' ');
     end;    
