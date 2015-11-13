@@ -20,7 +20,10 @@ begin
     for i := 1 to n div 2 do 
     begin
       if a[i] = a[i + k] then proverka := true
-      else proverka := false;
+      else begin
+      proverka := false;
+      continue;
+      end;
       if (proverka = true) and ((i + k) = n) then
       begin
         writeln('последовательность периодическая');
