@@ -33,7 +33,7 @@ begin
     begin
       summa := summa + x * prov;
       x := x * 10;
-      if (i = 0) then  writeln('„исло', ' ', summa);
+      if (i = 0) then  writeln('Number', ' ', summa);
     end
     else 
     begin
@@ -47,10 +47,10 @@ end;
 
 
 begin
-  writeln('¬ведите размер массива');
+  writeln('Enter the size of the array');
   readln(n);
   setlength(numbers, n);
-  writeln('¬ведите цифры числа');
+  writeln('Enter numbers');
   for i := 0 to n - 1 do 
   begin
     readln(numbers[i]);
