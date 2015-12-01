@@ -46,7 +46,7 @@ begin
     end;
   end;
   close(f);
-  writeln(summa);
+  writeln('Summ is',' ',summa);
 end;
 
 begin
