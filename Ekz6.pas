@@ -13,6 +13,8 @@ var
 begin
   lmax := 0;
   w := '';
+  l:=0;
+  slovo:='';
   while not Eof(f) do
   begin
     read(f, symb);
