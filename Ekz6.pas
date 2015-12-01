@@ -8,19 +8,19 @@ var
   lmax: integer;
   w: string;
   symb: char;
-  slovo: string;
+  my_word: string;
   l: integer;
 begin
   lmax := 0;
   w := '';
   l:=0;
-  slovo:='';
+  my_word:='';
   while not Eof(f) do
   begin
     read(f, symb);
     if (symb <> ' ') then 
     begin
-      slovo := slovo + symb;
+      my_word := my_word + symb;
       inc(l);
     end;
     if (symb = ' ') or (Eof(f)) then
@@ -28,10 +28,10 @@ begin
       if l > lmax then 
       begin
         lmax := l;
-        w := slovo;
+        w := my_word;
       end;
       l := 0;
-      slovo := '';
+      my_word := '';
     end;
   end;
   close(f);
