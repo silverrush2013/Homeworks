@@ -3,34 +3,44 @@ program A2;
 const
   n = 4;
 
+type
+  mas = array [1..n]of integer;
+
+procedure period(a: mas);
 var
-  a: array[1..n] of integer;
   i, k: integer;
   proverka: boolean;
-
 begin
-  for i := 1 to n do
-    read(a[i]);
   proverka := true;
-  i := 1;
-  k := 1;
-  
-  while (k <= n div 2 ) do {Разница между индексами}
+  k := 1; 
+  while (k <= n div 2 ) do 
   begin
-    for i := 1 to n div 2 do 
+    for i := 1 to n div 2 do
     begin
       if a[i] = a[i + k] then proverka := true
-      else begin
-      proverka := false;
-      continue;
-      end;
-      if (proverka = true) and ((i + k) = n) then
+      else
       begin
-        writeln('последовательность периодическая');
+        proverka := false;
         break;
       end;
-    end;     
+      if (proverka = true) and ((i + k) >= n) then 
+      begin
+        writeln('periodic');
+        exit;
+      end;
+    end;    
     inc(k);
   end;
-  if (proverka = false) then writeln('последовательность не периодическая');
+  if (proverka = false) then writeln('not periodic');
+end;
+
+var
+  a: mas;
+  i: integer;
+
+begin
+  Writeln('Enter elements of array');
+  for i := 1 to n do
+    read(a[i]);
+  period(a)
 end.

@@ -1,7 +1,7 @@
 program ekz_7;
 
 var
-  f: text;
+  f1,f2: text;
 
 
 function Convertation(a: char): integer;
@@ -45,12 +45,15 @@ begin
       number := '';
     end;
   end;
-  close(f);
-  writeln('Summ is',' ',summa);
+  close(f1);
+  writeln(f2,'Summ is',' ',summa);
+  close(f2);
 end;
 
 begin
-  assign(f, 'C:\Users\Admin\Desktop\blok.txt');
-  reset(f);
-  Summ(f);
+  assign(f1, 'C:\Users\Admin\Desktop\blok.txt');
+  assign(f2, 'C:\Users\Admin\Desktop\blok1.txt');
+  reset(f1);
+  rewrite(f2);
+  Summ(f1);
 end.
