@@ -4,9 +4,15 @@ var
   f1,f2: text;
 
 
+function isDigit(a: char): boolean;
+begin
+  isDigit := (a >= '0') and (a <= '9');
+end;
+
 function Convertation(a: char): integer;
 begin
-  Convertation := integer(a) - integer('0');
+  if isDigit(a) = false then Convertation := -1;
+  if isDigit(a) = true then Convertation := integer(a) - integer('0');
 end;
 
 
@@ -19,8 +25,12 @@ begin
   for i := length(number) downto 1 do
   begin
     prov := Convertation(number[i]);
+    if prov <> -1 then
+    begin
     summa := summa + x * prov;
     x := x * 10;
+    end
+    else summa:=0;
   end;  
   To_Int := summa;
 end;
