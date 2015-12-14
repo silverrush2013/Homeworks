@@ -1,4 +1,4 @@
-program sovpad;
+program OA2;
 
 const
   n = 7; 
