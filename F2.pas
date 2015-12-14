@@ -2,6 +2,7 @@ program ekz_7;
 
 var
   f1,f2: text;
+  summa:integer;
 
 
 function isDigit(a: char): boolean;
@@ -55,9 +56,6 @@ begin
       number := '';
     end;
   end;
-  close(f1);
-  writeln(f2,'Summ is',' ',summa);
-  close(f2);
 end;
 
 begin
@@ -66,4 +64,7 @@ begin
   reset(f1);
   rewrite(f2);
   Summ(f1);
+  close(f1);
+  writeln(f2,'Summ is',' ',summa);
+  close(f2);
 end.

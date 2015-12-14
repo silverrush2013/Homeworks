@@ -43,10 +43,12 @@ begin
 end;
 
 begin
+  writeln('Enter elements of array 1');
   for i := 1 to n do 
   begin
     read(a1[i]); 
-  end; 
+  end;
+  writeln('Enter elements of array 2');
   for i := 1 to h do 
   begin
     read(a2[i]); 

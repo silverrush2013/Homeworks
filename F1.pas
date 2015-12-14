@@ -2,6 +2,8 @@ program ekzamen_files1;
 
 var
   f: text;
+  lmax:integer;
+  w:string;
 
 procedure the_longest_word(f: text);
 var
@@ -34,13 +36,13 @@ begin
       my_word := '';
     end;
   end;
-  close(f);
-  writeln('The length of the longest word is', ' ', lmax);
-  writeln('This word is', ' ', w);
 end;
 
 begin
   assign(f, 'C:\Users\Admin\Desktop\blok.txt');
   reset(f);
   the_longest_word(f);
+  close(f);
+  writeln('The length of the longest word is', ' ', lmax);
+  writeln('This word is', ' ', w);
 end.
