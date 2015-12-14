@@ -10,11 +10,11 @@ var
   b: array[1..h] of real;
 
 begin
-  for i := 1 to n do {заполняем первый массив}
+  for i := 1 to n do 
   begin
     read(a[i]); 
   end; 
-  for i := 1 to h do {заполняем второй массив}
+  for i := 1 to h do 
   begin
     read(b[i]); 
   end; 
@@ -22,10 +22,10 @@ begin
   begin
     for k := 0 to h - 1 do 
     begin
-      if (a[i + k] = b[1 + k]) then {считаем количество совпадений массивов} 
+      if (a[i + k] = b[1 + k]) then 
         itog := itog + 1 
-      else break; {если совпадения подряд идущих элементов нет,то нет смысла искать - прерываем цикл }
-      if itog = h then g := i; {если количество совпадений равно количеству элементов во втором массиве,то запоминаем индекс }
+      else break; 
+      if itog = h then g := i; 
     end; 
   end; 
   if itog >= h then writeln('индекс элемента,после которого массив b совпадает с массивом a', ' ', g )
