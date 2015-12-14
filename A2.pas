@@ -1,7 +1,7 @@
 program A2;
 
 const
-  n = 4;
+  n = 6;
 
 type
   mas = array [1..n]of integer;
