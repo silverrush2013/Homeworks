@@ -31,7 +31,7 @@ begin
   
   for i := 1 to n do
   begin
-    if(sqrt(xy[i].x * xy[i].x + xy[i].y * xy[i].y) <> r) then
+    if((sqrt(xy[i].x * xy[i].x + xy[i].y * xy[i].y)) <> r) then
       b := false;
   end;
   write(b);
