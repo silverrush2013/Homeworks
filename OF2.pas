@@ -11,18 +11,18 @@ begin
   read(f2, s2);
   while (not eof(f1)) and (not eof(f2)) do
   begin
-    if s1 = s2 then 
+    if (s1 = s2) and (not eof(f1)) and (not eof(f2)) then 
     begin
       write(f3, s1, ' ', s1, ' ');
       read(f1, s1);
       read(f2, s2);
     end;
-    if (s1 < s2) then  
+    if (s1 < s2) and (not eof(f1)) and (not eof(f2)) then  
     begin
       write(f3, s1, ' ');
       read(f1, s1);
     end;
-    if (s1 > s2) then 
+    if (s1 > s2) and (not eof(f1)) and (not eof(f2)) then 
     begin
       write(f3, s2, ' ');
       read(f2, s2);
@@ -44,7 +44,7 @@ begin
         write(f3, s2);
         repeat
           read(f2, s2);
-          write(f3, s2, ' ');
+         if (s2<s1) then write(f3, s2, ' ');
         until (s2 >= s1) or (Eof(f2));
         if (not eof(f2)) then 
         begin
@@ -56,7 +56,7 @@ begin
         end;
       end;
     end;
-    if (eof(f2)) and (not Eof(f1)) then begin
+    if (eof(f2))  then begin
       if s1 >= s2 then 
       begin
         write(f3, s2, ' ', s1, ' ');
@@ -67,10 +67,10 @@ begin
       end;
       if s1 < s2 then
       begin
-        writeln(f3, s1);
+        write(f3, s1,' ');
         repeat
           read(f1, s1);
-          write(f3, s1, ' ');
+         if (s1<s2) then write(f3, s1, ' ');
         until (s1 >= s2) or (eof(f1));
         if (not eof(f1)) then 
         begin
