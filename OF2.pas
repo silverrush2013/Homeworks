@@ -29,8 +29,8 @@ begin
     end;
     if (eof(f1))  then 
     begin
-    if (Eof(f1)) and (Eof(f2)) and (s1>=s2) then write(f3,s2,' ',s1);
-    if (Eof(f1)) and (Eof(f2)) and (s1<s2) then write(f3,s1,' ',s2);
+      if (Eof(f2)) and (s1>=s2) then write(f3,s2,' ',s1,' ');
+      if (Eof(f2)) and (s1<s2) then write(f3,s1,' ',s2,' ');
       if (s2 >= s1) and (not Eof(f2)) then 
       begin
         write(f3, s1, ' ', s2, ' ');
@@ -39,14 +39,16 @@ begin
           write(f3, s2, ' ');
         until Eof(f2);
       end;
-      if (s1 > s2) and (not Eof(f2)) then
+        if (s1 > s2) and (not Eof(f2)) then
       begin
-        write(f3, s2);
+        write(f3, s2,' ');
         repeat
           read(f2, s2);
-         if (s2<s1) then write(f3, s2, ' ');
+          write(f3, s2, ' ');
+          if (Eof(f2)) and (s1>=s2) then write(f3,s1,' ');
+          if (Eof(f2)) and (s1<s2) then write(f3,s1,' ',s2,' ');
         until (s2 >= s1) or (Eof(f2));
-        if (not eof(f2)) then 
+        if (s1<s2) and (not eof(f2)) then 
         begin
           write(f3, s1, ' ', s2, ' ');
           repeat
@@ -56,7 +58,7 @@ begin
         end;
       end;
     end;
-    if (eof(f2))  then begin
+    if (eof(f2)) and (not Eof(f1)) then begin
       if s1 >= s2 then 
       begin
         write(f3, s2, ' ', s1, ' ');
