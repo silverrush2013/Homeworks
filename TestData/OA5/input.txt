@@ -1,0 +1,4 @@
+Enter elements of array 1
+12 34 45 67
+Enter elements of array 2
+45 67 89

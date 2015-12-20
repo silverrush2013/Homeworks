@@ -1,0 +1,7 @@
+Enter the size of array
+4
+Enter numbers
+12
+56
+78
+90

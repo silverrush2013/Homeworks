@@ -1,0 +1,6 @@
+Enter the size of array
+5
+Enter elements of array in ascending order
+3 67 89 99 100
+Enter the element
+90

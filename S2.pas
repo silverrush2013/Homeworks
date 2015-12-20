@@ -16,7 +16,6 @@ end;
 
 procedure add(a: mas; num: integer; N: integer);
 begin
-  if (num - 1) > (N - 1) then setlength(a, num - 1);
   a[num - 1] := true;
 end;
 
@@ -37,6 +36,10 @@ begin
   begin
     writeln('Enter the elment to add');
     read(num1);
+    if num1 > N then begin 
+    setlength(a, num1);
+    N:=num1;   
+    end;
     add(a, num1, n);
   end;
   writeln('How many elements do you want to delete?');
@@ -45,7 +48,8 @@ begin
   begin
     writeln('Enter the element to delete');
     read(num2);
-    delete(a, num2, n);
+    if num2<N then delete(a, num2, n)
+    else writeln('Doesn`t contain');
   end;
   writeln('How many elements do you want to check?');
   read(count3);

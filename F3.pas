@@ -20,10 +20,14 @@ begin
   for i := 1 to j do
   begin
     k := (a mod 10) * x;
-    str(k, l);
-    num := num + k + ' ';
+    if (k <> 0) then
+    begin
+      str(k, l);
+      num := num + k + ' ';
+    end;
     a := (a) div 10;
     x := x * 10;
+    
   end;
   Int_To_String := num;
 end;

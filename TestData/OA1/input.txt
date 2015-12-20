@@ -1,0 +1,4 @@
+Enter elements of array
+3 5 6 8 9 12
+Enter an element for search
+6

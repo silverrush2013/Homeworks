@@ -1,0 +1,4 @@
+Enter elements of array 1
+1 2 56 99 120 600 601
+Enter elements of array 2
+2 56 99

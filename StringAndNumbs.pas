@@ -11,7 +11,7 @@ function isDigit(a: char): boolean;
 var
   i: integer;
 begin
-  isDigit := (a >= '0') and (a <= '9');
+  isDigit := ((a >= '0') and (a <= '9'));
 end;
 
 function Convertation(a: char): integer;
@@ -37,7 +37,7 @@ begin
     end
     else 
     begin
-      writeln('-1');
+      writeln('Not a number');
       break;
     end;
   end;  

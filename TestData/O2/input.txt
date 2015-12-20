@@ -1,0 +1,4 @@
+Enter the length of array
+8
+Enter elements of array
+6 3 2 1 8 9 12 34

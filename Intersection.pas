@@ -20,18 +20,18 @@ begin
   begin
     if a[i] = b[j] then
     begin
-      write(a[i]);
+      write(a[i],' ');
       inc(i);
       inc(j);
     end;
     if (a[i] < b[j])  then inc(i);
     if (a[i] > b[j])  then inc(j);
     if (i = n) then begin
-      if (a[n] = b[j]) and (j <> h) then write(a[n])
+      if (a[n] = b[j]) and (j <> h) then write(a[n],' ')
       else inc(j);
     end;
     if (j = h) then begin
-      if (b[h] = a[i]) and (i <> n) then write(b[h])
+      if (b[h] = a[i]) and (i <> n) then write(b[h],' ')
       else inc(i);
     end;
   end;

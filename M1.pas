@@ -72,7 +72,7 @@ begin
     begin
       writeln(a[strokamin, stolbecmax], ' ');
     end;    
-    if (i = n) and ((min1 <> max1) and (min1 <> max2)) then writeln('There is no point in',' ',i,' ', 'line'); 
+    if (i = n) and ((min1 <> max1) and (min1 <> max2)) then writeln('There is no point'); 
   end;
 end;
 

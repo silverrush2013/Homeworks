@@ -30,11 +30,11 @@ begin
     if (a1[i] < a2[j]) then inc(i);
     if (a1[i] > a2[j]) then inc(j);
     if (i = n) then begin
-      if (a1[n] = a2[j]) then write(a1[n])
+      if (a1[n] = a2[j]) then write(a1[n],' ')
       else inc(j);
     end;
     if (j = h) then begin
-      if (a2[h] = a1[i]) and (i <> n) then write(a2[h])
+      if (a2[h] = a1[i]) and (i <> n) then write(a2[h],' ')
       else inc(i);
     end;
   end;

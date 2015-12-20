@@ -1,22 +1,19 @@
-program ekzamen_files1;
+program F1;
 
 var
   f: text;
-  lmax:integer;
-  w:string;
+
 
 procedure the_longest_word(f: text);
 var
-  lmax: integer;
-  w: string;
   symb: char;
-  my_word: string;
-  l: integer;
+  my_word,w: string;
+  l,lmax: integer;
 begin
   lmax := 0;
   w := '';
-  l:=0;
-  my_word:='';
+  l := 0;
+  my_word := '';
   while not Eof(f) do
   begin
     read(f, symb);
@@ -36,13 +33,13 @@ begin
       my_word := '';
     end;
   end;
+  writeln('The length of the longest word is', ' ', lmax);
+  writeln('This word is', ' ', w);
 end;
 
 begin
-  assign(f, 'C:\Users\Admin\Desktop\blok.txt');
+  assign(f, 'C:\Users\Admin\Desktop\words.txt');
   reset(f);
   the_longest_word(f);
   close(f);
-  writeln('The length of the longest word is', ' ', lmax);
-  writeln('This word is', ' ', w);
 end.

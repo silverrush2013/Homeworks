@@ -2,7 +2,6 @@ program ekz_7;
 
 var
   f1,f2: text;
-  summa:integer;
 
 
 function isDigit(a: char): boolean;
@@ -56,15 +55,15 @@ begin
       number := '';
     end;
   end;
+   write(f2,'Summ is',' ',summa);
 end;
 
 begin
-  assign(f1, 'C:\Users\Admin\Desktop\blok.txt');
-  assign(f2, 'C:\Users\Admin\Desktop\blok1.txt');
+  assign(f1, 'C:\Users\Admin\Desktop\numbs.txt');
+  assign(f2, 'C:\Users\Admin\Desktop\summ.txt');
   reset(f1);
   rewrite(f2);
   Summ(f1);
   close(f1);
-  writeln(f2,'Summ is',' ',summa);
   close(f2);
 end.

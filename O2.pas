@@ -22,7 +22,6 @@ begin
       begin
         index := j;
         min := a[j];
-        writeln(index);
       end;
     end; 
       t := a[i];

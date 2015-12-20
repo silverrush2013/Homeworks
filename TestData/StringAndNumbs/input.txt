@@ -1,0 +1,10 @@
+Enter the size of the array
+7
+Enter numbers
+1
+4
+5
+6
+8
+9
+2

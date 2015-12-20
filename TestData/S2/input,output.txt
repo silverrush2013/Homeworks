@@ -1,0 +1,39 @@
+Enter the size of array
+6
+How many elements do you want to add?
+6
+Enter the elment to add
+1
+Enter the elment to add
+2
+Enter the elment to add
+3
+Enter the elment to add
+4
+Enter the elment to add
+5
+Enter the elment to add
+6
+How many elements do you want to delete?
+2
+Enter the element to delete
+2
+Enter the element to delete
+3
+How many elements do you want to check?
+5
+Enter the element to know if the array contains it or not
+1
+Array contains this element
+Enter the element to know if the array contains it or not
+2
+Array doesn`t contain this element
+Enter the element to know if the array contains it or not
+3
+Array doesn`t contain this element
+Enter the element to know if the array contains it or not
+4
+Array contains this element
+Enter the element to know if the array contains it or not
+5
+Array contains this element

@@ -1,7 +1,7 @@
 {R2. Вычисление свойств.
  Дана последовательность (файл) точек плоскости (запись/полярные координаты).
  Выяснить, лежат ли они ВСЕ на заданной прямой (коэффициенты линейного уравнения)}
-program qq(input, output);
+program qq;
 
 const
   n = 2;
@@ -38,18 +38,14 @@ begin
 end;
 
 
-procedure main();
+procedure R2(  input, output: text);
 type
   arr = array [1..n] of polar;//массив координат точек
 var
   cord: arr;
   i: integer;
   res: boolean;
-begin
-  assign(output, 'output.txt');
-  assign(input, 'input.txt');
-  reset(input);
-  rewrite(output);
+begin  
   //ввод прямой
   read(input, a);
   read(input, b);
@@ -71,11 +67,16 @@ begin
     inc(i);
   end;
   write(output, res);
-  input.Close();
-  output.Close();
+
 end;
 
 
 begin
-  main();
+  assign(output, 'C:\Users\Admin\Desktop\output.txt');
+  assign(input, 'C:\Users\Admin\Desktop\input.txt');
+  reset(input);
+  rewrite(output);
+  r2(input,output);
+  Close(input);
+ Close(output);
 end.

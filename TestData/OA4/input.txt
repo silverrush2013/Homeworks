@@ -1,0 +1,8 @@
+enter the length of 1 array
+6
+enter the length of 2 array
+4
+enter elements of 1 array
+12 45 56 67 99 100
+enter elements of 2 array
+12 56 67 99

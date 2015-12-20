@@ -31,9 +31,9 @@ begin
 end;
 
 begin
- assign(f1, 'C:\Users\Admin\Desktop\1.txt');
+ assign(f1, 'C:\Users\Admin\Desktop\numbs1.txt');
   reset(f1);
-   assign(f2, 'C:\Users\Admin\Desktop\2.txt');
+   assign(f2, 'C:\Users\Admin\Desktop\numbs2.txt');
   reset(f2);
   writeln('Does a1 contain a2?', ' ', incl(f1, f2));
   close(f1);
